@@ -1,0 +1,16 @@
+/* Tablet */
+@media (max-width: 768px) {
+  .signup-box {
+    width: 95%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .signup-box {
+    padding: 25px 20px;
+  }
+  .signup-box h2 {
+    font-size: 20px;
+  }
+}
