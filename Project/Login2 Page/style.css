@@ -1,0 +1,79 @@
+ *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(150deg, rgb(227, 135, 135), rgb(202, 202, 132));
+      color: black;
+    }
+    .container{
+      height: 600px;
+      width: 500px;
+      padding: 20px;
+      border: 2px solid rgb(58, 55, 55);
+      background: linear-gradient(360deg, rgb(244, 171, 183), rgb(170, 170, 235));
+      border-radius: 10px;
+      box-shadow: 4px 4px 5px #AB5F8F;
+    }
+    h1{
+      margin-top: 20px;
+      margin-left: 190px;
+    }
+    .xyz{
+      margin-left: 20px;
+    }
+    #button{
+      align-items: center;
+      background-color: rgb(123,55,217);
+      width: 90px;
+      height: 30px;
+      border-radius: 5px;
+    }
+    input, select {
+      padding: 8px;
+      width: 85%;
+      border: 1px solid #555;
+      border-radius: 5px;
+      outline: none;
+    }
+    input:focus, select:focus {
+      border-color: purple;
+      box-shadow: 0 0 6px rgba(123,55,217,0.5);
+    }
+    #button{
+      display: block;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #7A2FF7, #A068F6);
+      width: 120px;
+      height: 35px;
+      border-radius: 6px;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #button:hover{
+     transform: scale(1.05);
+     box-shadow: 0 0 10px #7A2FF7;
+    }
+    h1{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .gender{
+      display: flex;
+      justify-content: space-between;
+      width: 85%;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    .gender label{
+      font-size: 18px;
+    }

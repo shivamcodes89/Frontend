@@ -1,0 +1,83 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #1c1c3c, #3e3e52);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main Container */
+.container {
+  width: 95%;
+  max-width: 1100px;
+  height: 95vh;
+  background: url("https://i.pinimg.com/1200x/58/42/0c/58420c9aedff75168e32971aa91abd68.jpg") no-repeat center center/cover;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* Signup Box */
+.signup-box {
+  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 40px 30px;
+  text-align: center;
+  color: #fff;
+  width: 90%;
+  max-width: 350px;
+}
+
+.signup-box h2 {
+  margin-bottom: 10px;
+}
+
+.signup-box .small {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.signup-box input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #4c8df5;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.or {
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.social-login a {
+  font-size: 22px;
+  margin: 0 10px;
+  color: #fff;
+}

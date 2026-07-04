@@ -1,0 +1,216 @@
+:root {
+  --ink: #1e293b;   /* primary text */
+  --muted: #64748b; /* secondary text */
+  --bg: #f6f7fb;    /* page bg */
+  --card: #ffffff;  /* card bg */
+  --line: #e8ebf2;  /* separators */
+  --brand: #2b6cb0; /* royal blue */
+  --accent: #8b5cf6;/* soft violet */
+  --gold: #c9a227;  /* luxury accent */
+  --shadow: rgba(15, 23, 42, 0.08); /* global shadow */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0.6rem;
+}
+p {
+  margin: 0.4rem 0 1rem;
+}
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+#about-header {
+  position: relative;
+  padding: 96px 24px 120px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to bottom, #0f172a, #1e3a8a, #4338ca);
+  overflow: hidden;
+}
+#about-header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 48px;
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  border-radius: 999px;
+}
+#about-header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.3px;
+}
+#about-header p {
+  max-width: 780px;
+  margin: 0.75rem auto 0;
+  color: #e6e8ff;
+  opacity: 0.95;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto 64px;
+  padding: 0 24px;
+}
+
+
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px var(--shadow);
+  border: 1px solid var(--line);
+  padding: 32px 28px;
+  margin: 28px 0 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(22, 43, 180, 0.456);
+}
+.card::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(228, 5, 5, 0.07), transparent);
+  pointer-events: none;
+  border-radius: inherit;
+}
+.section-title {
+  display: inline-block;
+  font-size: 1.4rem;
+  position: relative;
+  padding-bottom: 8px;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56%;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  opacity: 0.25;
+}
+.lead::first-letter {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  line-height: 1;
+  float: left;
+  margin: 0.1rem 0.5rem 0 0;
+  color: var(--brand);
+}
+a[target="_blank"] {
+  position: relative;
+  color: var(--brand);
+  font-weight: 600;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+a[target="_blank"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--brand);
+  transition: width 0.3s ease;
+}
+a[target="_blank"]:hover::after {
+  width: 100%;
+}
+
+blockquote {
+  position: relative;
+  margin: 0;
+  background: #f4f7ff;
+  border: 1px dashed #d7dfff;
+  padding: 22px 24px 24px;
+  border-radius: 14px;
+  color: #334155;
+}
+blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -22px;
+  left: 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  color: #94a3b8;
+  opacity: 0.35;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-top: 14px;
+}
+
+.member {
+  position: relative;
+  padding: 26px 22px 22px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff, #fbfbfe);
+  border: 1px solid var(--line);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  overflow: hidden;
+}
+.member:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 12px 25px rgba(255, 0, 0, 0.25); 
+  border-color: rgba(255, 0, 0, 0.4); 
+}
+.member img {
+  width: 40%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin-left: 0;
+  transition: filter 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.member::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(218, 204, 84, 0.25), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  border-radius: 16px;
+}
+.member:hover::after {
+  opacity: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid var(--line);
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(6px);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
